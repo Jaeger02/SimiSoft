@@ -54,5 +54,11 @@ namespace SimiSoft
             productoBindingSource.DataSource = new Producto().GetAll();
             gvProductos.BestFitColumns();
         }
+
+        private void btnActualizar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            productoBindingSource.DataSource = new Producto().GetAll();
+            gvProductos.BestFitColumns();
+        }
     }
 }

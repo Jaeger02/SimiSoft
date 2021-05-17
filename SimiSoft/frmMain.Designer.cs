@@ -48,6 +48,10 @@ namespace SimiSoft
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.tabMdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.mnVentas = new DevExpress.XtraBars.BarButtonItem();
+            this.barSmubItem2 = new DevExpress.XtraBars.BarSubItem();
+            this.nmVenta = new DevExpress.XtraBars.BarSubItem();
+            this.btnAdminVentas = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.bManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabMdiManager)).BeginInit();
             this.SuspendLayout();
@@ -72,9 +76,11 @@ namespace SimiSoft
             this.btnProductos,
             this.btnClientes,
             this.btnProveedores,
-            this.skinBarSubItem1});
+            this.skinBarSubItem1,
+            this.nmVenta,
+            this.btnAdminVentas});
             this.bManager.MainMenu = this.bar2;
-            this.bManager.MaxItemId = 10;
+            this.bManager.MaxItemId = 14;
             this.bManager.StatusBar = this.bar3;
             // 
             // bar2
@@ -86,6 +92,7 @@ namespace SimiSoft
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.mnArchivo),
             new DevExpress.XtraBars.LinkPersistInfo(this.mnCatalogos),
+            new DevExpress.XtraBars.LinkPersistInfo(this.nmVenta),
             new DevExpress.XtraBars.LinkPersistInfo(this.skinBarSubItem1)});
             this.bar2.OptionsBar.DrawBorder = false;
             this.bar2.OptionsBar.DrawDragBorder = false;
@@ -129,6 +136,7 @@ namespace SimiSoft
             this.btnClientes.Caption = "Clientes";
             this.btnClientes.Id = 7;
             this.btnClientes.Name = "btnClientes";
+            this.btnClientes.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnClientes_ItemClick);
             // 
             // btnProveedores
             // 
@@ -160,7 +168,7 @@ namespace SimiSoft
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.bManager;
-            this.barDockControlTop.Size = new System.Drawing.Size(753, 21);
+            this.barDockControlTop.Size = new System.Drawing.Size(753, 25);
             // 
             // barDockControlBottom
             // 
@@ -174,17 +182,17 @@ namespace SimiSoft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 21);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 25);
             this.barDockControlLeft.Manager = this.bManager;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 362);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 358);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(753, 21);
+            this.barDockControlRight.Location = new System.Drawing.Point(753, 25);
             this.barDockControlRight.Manager = this.bManager;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 362);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 358);
             // 
             // barSubItem1
             // 
@@ -210,6 +218,34 @@ namespace SimiSoft
             // tabMdiManager
             // 
             this.tabMdiManager.MdiParent = this;
+            // 
+            // mnVentas
+            // 
+            this.mnVentas.Caption = "Ventas";
+            this.mnVentas.Id = 10;
+            this.mnVentas.Name = "mnVentas";
+            this.mnVentas.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.mnVentas_ItemClick);
+            // 
+            // barSmubItem2
+            // 
+            this.barSmubItem2.Caption = "Ventas";
+            this.barSmubItem2.Id = 11;
+            this.barSmubItem2.Name = "barSmubItem2";
+            // 
+            // nmVenta
+            // 
+            this.nmVenta.Caption = "Ventas";
+            this.nmVenta.Id = 12;
+            this.nmVenta.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnAdminVentas)});
+            this.nmVenta.Name = "nmVenta";
+            // 
+            // btnAdminVentas
+            // 
+            this.btnAdminVentas.Caption = "Administrar";
+            this.btnAdminVentas.Id = 13;
+            this.btnAdminVentas.Name = "btnAdminVentas";
+            this.btnAdminVentas.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAdminVentas_ItemClick);
             // 
             // frmMain
             // 
@@ -253,6 +289,10 @@ namespace SimiSoft
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.SkinBarSubItem skinBarSubItem1;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager tabMdiManager;
+        private DevExpress.XtraBars.BarSubItem nmVenta;
+        private DevExpress.XtraBars.BarButtonItem btnAdminVentas;
+        private DevExpress.XtraBars.BarButtonItem mnVentas;
+        private DevExpress.XtraBars.BarSubItem barSmubItem2;
     }
 }
 
